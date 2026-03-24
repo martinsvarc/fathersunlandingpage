@@ -25,7 +25,6 @@
     font-weight: 300;
     min-height: 100vh;
   }
-  /* NAVIGATION */
   nav {
     background: #111;
     border-bottom: 1px solid var(--border);
@@ -43,12 +42,9 @@
     font-weight: 600;
     color: var(--accent);
     letter-spacing: 0.02em;
-    cursor: pointer;
+    text-decoration: none;
   }
-  .nav-links {
-    display: flex;
-    gap: 24px;
-  }
+  .nav-links { display: flex; gap: 24px; }
   .nav-links a {
     color: var(--muted);
     text-decoration: none;
@@ -57,10 +53,6 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--text); }
-  /* PAGES */
-  .page { display: none; }
-  .page.active { display: block; }
-  /* HOME PAGE */
   .hero {
     max-width: 560px;
     margin: 80px auto 0;
@@ -95,7 +87,6 @@
     color: var(--muted);
     margin-bottom: 48px;
   }
-  /* FORM */
   .form-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -103,9 +94,7 @@
     padding: 36px;
     text-align: left;
   }
-  .form-group {
-    margin-bottom: 16px;
-  }
+  .form-group { margin-bottom: 16px; }
   .form-group label {
     display: block;
     font-size: 12px;
@@ -129,20 +118,10 @@
     transition: border-color 0.2s;
     appearance: none;
   }
-  .form-group input:focus, .form-group select:focus {
-    border-color: var(--accent);
-  }
+  .form-group input:focus, .form-group select:focus { border-color: var(--accent); }
   .form-group input::placeholder { color: #555; }
-  .form-group select option {
-    background: #1a1a1a;
-    color: var(--text);
-  }
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-  /* CONSENT */
+  .form-group select option { background: #1a1a1a; color: var(--text); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .consent-box {
     background: var(--surface2);
     border: 1px solid var(--border);
@@ -164,15 +143,8 @@
     accent-color: var(--accent);
     cursor: pointer;
   }
-  .consent-text {
-    font-size: 12px;
-    line-height: 1.6;
-    color: #999;
-  }
-  .consent-text a {
-    color: var(--accent);
-    text-decoration: none;
-  }
+  .consent-text { font-size: 12px; line-height: 1.6; color: #999; }
+  .consent-text a { color: var(--accent); text-decoration: none; }
   .consent-text a:hover { text-decoration: underline; }
   .sms-disclosure {
     font-size: 11px;
@@ -182,7 +154,6 @@
     padding-top: 10px;
     border-top: 1px solid var(--border);
   }
-  /* SUBMIT BUTTON */
   .btn-submit {
     width: 100%;
     background: var(--accent);
@@ -199,82 +170,6 @@
   }
   .btn-submit:hover { opacity: 0.9; transform: translateY(-1px); }
   .btn-submit:active { transform: translateY(0); }
-  /* LEGAL PAGES */
-  .legal-page {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 60px 24px 80px;
-  }
-  .legal-page h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: var(--text);
-  }
-  .legal-updated {
-    font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 40px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--border);
-  }
-  .legal-section {
-    margin-bottom: 36px;
-  }
-  .legal-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--accent);
-    margin-bottom: 12px;
-  }
-  .legal-section p {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #aaa;
-    margin-bottom: 12px;
-  }
-  .legal-section ul {
-    padding-left: 20px;
-    margin-bottom: 12px;
-  }
-  .legal-section ul li {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #aaa;
-    margin-bottom: 6px;
-  }
-  .legal-highlight {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
-    border-radius: var(--radius);
-    padding: 16px 20px;
-    margin: 16px 0;
-  }
-  .legal-highlight p {
-    font-size: 13px;
-    color: #bbb;
-    margin: 0;
-  }
-  /* FOOTER */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 28px 24px;
-    text-align: center;
-  }
-  footer p {
-    font-size: 12px;
-    color: #555;
-    line-height: 1.7;
-  }
-  footer a {
-    color: #777;
-    text-decoration: none;
-  }
-  footer a:hover { color: var(--accent); }
-  /* SUCCESS MESSAGE */
   .success-overlay {
     display: none;
     text-align: center;
@@ -307,6 +202,14 @@
     max-width: 360px;
     margin: 0 auto;
   }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 24px;
+    text-align: center;
+  }
+  footer p { font-size: 12px; color: #555; line-height: 1.7; }
+  footer a { color: #777; text-decoration: none; }
+  footer a:hover { color: var(--accent); }
   @media (max-width: 480px) {
     .form-row { grid-template-columns: 1fr; }
     .form-card { padding: 24px; }
@@ -317,205 +220,84 @@
 </head>
 <body>
 <nav>
-  <div class="nav-logo" onclick="showPage('home')">Father & Sun</div>
+  <a class="nav-logo" href="index.html">Father & Sun</a>
   <div class="nav-links">
-    <a href="#" onclick="showPage('home')">Home</a>
-    <a href="#" onclick="showPage('privacy')">Privacy Policy</a>
-    <a href="#" onclick="showPage('terms')">Terms of Service</a>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
   </div>
 </nav>
-<!-- HOME PAGE -->
-<div id="page-home" class="page active">
-  <div class="hero">
-    <div class="hero-badge">Florida Solar Consultations</div>
-    <h1>Clean Energy for Your <span>Home</span></h1>
-    <p>Find out if your home qualifies for solar. Get a free consultation from our team — no pressure, no obligation.</p>
-    <div class="form-card">
-      <div class="form-row">
-        <div class="form-group">
-          <label>First Name</label>
-          <input type="text" placeholder="John">
-        </div>
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" placeholder="Smith">
-        </div>
+<div class="hero">
+  <div class="hero-badge">Florida Solar Consultations</div>
+  <h1>Clean Energy for Your <span>Home</span></h1>
+  <p>Find out if your home qualifies for solar. Get a free consultation from our team — no pressure, no obligation.</p>
+  <div class="form-card">
+    <div class="form-row">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" placeholder="John">
       </div>
       <div class="form-group">
-        <label>Phone Number</label>
-        <input type="tel" placeholder="(555) 000-0000">
+        <label>Last Name</label>
+        <input type="text" placeholder="Smith">
       </div>
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="tel" placeholder="(555) 000-0000">
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="john@email.com">
+    </div>
+    <div class="form-group">
+      <label>Do you own your home?</label>
+      <select>
+        <option value="" disabled selected>Select an option</option>
+        <option>Yes, I own my home</option>
+        <option>No, I rent</option>
+      </select>
+    </div>
+    <div class="form-row">
       <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" placeholder="john@email.com">
-      </div>
-      <div class="form-group">
-        <label>Do you own your home?</label>
+        <label>Monthly Electric Bill</label>
         <select>
-          <option value="" disabled selected>Select an option</option>
-          <option>Yes, I own my home</option>
-          <option>No, I rent</option>
+          <option value="" disabled selected>Approx. amount</option>
+          <option>Under $100</option>
+          <option>$100 – $150</option>
+          <option>$150 – $200</option>
+          <option>$200 – $300</option>
+          <option>Over $300</option>
         </select>
       </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Monthly Electric Bill</label>
-          <select>
-            <option value="" disabled selected>Approx. amount</option>
-            <option>Under $100</option>
-            <option>$100 – $150</option>
-            <option>$150 – $200</option>
-            <option>$200 – $300</option>
-            <option>Over $300</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Credit Score Range</label>
-          <select>
-            <option value="" disabled selected>Approx. range</option>
-            <option>Below 600</option>
-            <option>600 – 650</option>
-            <option>650 – 700</option>
-            <option>700 – 750</option>
-            <option>750+</option>
-          </select>
-        </div>
-      </div>
-      <div class="consent-box">
-        <label class="consent-label">
-          <input type="checkbox" id="sms-consent">
-          <span class="consent-text">
-            By checking this box, I agree to receive SMS text messages from FATHER&SUN HOME SOLUTIONS LLC at the phone number provided. Messages may include appointment confirmations, consultation follow-up, and support communications. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out at any time. Reply HELP for help. I have read and agree to the <a href="#" onclick="showPage('privacy')">Privacy Policy</a> and <a href="#" onclick="showPage('terms')">Terms of Service</a>.
-          </span>
-        </label>
-        <div class="sms-disclosure">
-          Your information will not be sold or shared with third parties for marketing purposes. SMS consent is not a condition of purchase.
-        </div>
-      </div>
-      <button class="btn-submit" onclick="submitForm()">Request Free Consultation</button>
-      <div class="success-overlay" id="success-msg">
-        <div class="success-icon">&#10003;</div>
-        <h2>Thank You!</h2>
-        <p>Your consultation request has been submitted. Our team will reach out to you shortly.</p>
+      <div class="form-group">
+        <label>Credit Score Range</label>
+        <select>
+          <option value="" disabled selected>Approx. range</option>
+          <option>Below 600</option>
+          <option>600 – 650</option>
+          <option>650 – 700</option>
+          <option>700 – 750</option>
+          <option>750+</option>
+        </select>
       </div>
     </div>
-  </div>
-</div>
-<!-- PRIVACY POLICY PAGE -->
-<div id="page-privacy" class="page">
-  <div class="legal-page">
-    <h1>Privacy Policy</h1>
-    <div class="legal-updated">Last Updated: March 6, 2026</div>
-    <div class="legal-section">
-      <h2>1. Information We Collect</h2>
-      <p>We collect the following information when you submit our consultation request form:</p>
-      <ul>
-        <li>First and Last Name</li>
-        <li>Cellphone Number</li>
-        <li>Email Address</li>
-        <li>Zip Code</li>
-        <li>Home ownership status</li>
-        <li>Monthly electric bill range</li>
-        <li>Credit score range</li>
-        <li>IP address, browser type, and pages visited</li>
-      </ul>
-    </div>
-    <div class="legal-section">
-      <h2>2. How We Use Your Information</h2>
-      <p>We use the information we collect to:</p>
-      <ul>
-        <li>Provide solar consultation services and follow up on your inquiry</li>
-        <li>Send SMS notifications and appointment confirmations with your consent</li>
-        <li>Process billing and comply with legal obligations</li>
-        <li>Improve our services and communication</li>
-      </ul>
-    </div>
-    <div class="legal-section">
-      <h2>3. SMS Opt-In and Communications</h2>
-      <div class="legal-highlight">
-        <p>By checking the SMS consent checkbox on our form, you agree to receive text messages from FATHER&SUN HOME SOLUTIONS LLC. Message frequency may vary. Msg &amp; data rates may apply. Reply STOP to opt out at any time. Reply HELP for assistance.</p>
-      </div>
-      <p>SMS messages may include appointment confirmations, consultation follow-up, and support communications related to your inquiry. You may withdraw your SMS consent at any time by replying STOP to any message you receive from us.</p>
-    </div>
-    <div class="legal-section">
-      <h2>4. Mobile Information Sharing Statement</h2>
-      <div class="legal-highlight">
-        <p>We do not sell, rent, share, or transfer your mobile phone number or SMS opt-in data to any third parties for marketing purposes. Your mobile information will not be shared with third parties or affiliates for marketing or promotional purposes.</p>
+    <div class="consent-box">
+      <label class="consent-label">
+        <input type="checkbox" id="sms-consent">
+        <span class="consent-text">
+          By checking this box, I agree to receive SMS text messages from FATHER&SUN HOME SOLUTIONS LLC at the phone number provided. Messages may include appointment confirmations, consultation follow-up, and support communications. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out at any time. Reply HELP for help. I have read and agree to the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.
+        </span>
+      </label>
+      <div class="sms-disclosure">
+        Your information will not be sold or shared with third parties for marketing purposes. SMS consent is not a condition of purchase.
       </div>
     </div>
-    <div class="legal-section">
-      <h2>5. Cookie & Tracking Practices</h2>
-      <p>We use cookies to enhance your browsing experience and analyze site usage. You may disable cookies through your browser settings; however, some features of the site may not function properly as a result.</p>
-    </div>
-    <div class="legal-section">
-      <h2>6. Data Security</h2>
-      <p>We take reasonable technical and organizational measures to protect your personal information from unauthorized access, use, or disclosure. However, no method of transmission over the internet is 100% secure.</p>
-    </div>
-    <div class="legal-section">
-      <h2>7. Your Rights</h2>
-      <p>You have the right to access, correct, or delete your personal data at any time. To exercise these rights, or to withdraw your SMS consent, contact us at the information below or reply STOP to any SMS message.</p>
-    </div>
-    <div class="legal-section">
-      <h2>8. Contact</h2>
-      <p>FATHER&SUN HOME SOLUTIONS LLC<br>
-      7680 University Blvd STE 380, Orlando, FL 32819<br>
-      Email: rodrigosavio.guima@gmail.com<br>
-      Phone: +1 (689) 286-8616</p>
-    </div>
-  </div>
-</div>
-<!-- TERMS OF SERVICE PAGE -->
-<div id="page-terms" class="page">
-  <div class="legal-page">
-    <h1>Terms of Service</h1>
-    <div class="legal-updated">Last Updated: March 6, 2026</div>
-    <div class="legal-section">
-      <h2>1. Acceptance of Terms</h2>
-      <p>By accessing this website or submitting a consultation request, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, please do not use this website or submit any forms.</p>
-    </div>
-    <div class="legal-section">
-      <h2>2. Services</h2>
-      <p>FATHER&SUN HOME SOLUTIONS LLC provides solar consultation and home solutions services in Florida. Submitting a form on this website is a request for a consultation only and does not constitute a contract or obligation to purchase any product or service.</p>
-    </div>
-    <div class="legal-section">
-      <h2>3. SMS Communications</h2>
-      <div class="legal-highlight">
-        <p>By opting in to SMS communications, you consent to receive text messages from FATHER&SUN HOME SOLUTIONS LLC regarding your consultation request, appointment scheduling, and support. Message frequency varies. Msg &amp; data rates may apply. To stop receiving messages, reply STOP at any time. For help, reply HELP or contact us through this website.</p>
-      </div>
-      <p>SMS consent is not a condition of purchasing any goods or services. You may opt out at any time without affecting your ability to receive our services.</p>
-    </div>
-    <div class="legal-section">
-      <h2>4. User Responsibilities</h2>
-      <p>By submitting a form on this website, you confirm that:</p>
-      <ul>
-        <li>The information you provide is accurate and truthful</li>
-        <li>You are 18 years of age or older</li>
-        <li>The phone number provided belongs to you</li>
-        <li>You are authorized to consent to receive SMS communications at the number provided</li>
-      </ul>
-    </div>
-    <div class="legal-section">
-      <h2>5. No Warranties</h2>
-      <p>This website and its content are provided on an "as is" basis. FATHER&SUN HOME SOLUTIONS LLC makes no warranties, express or implied, regarding the accuracy or completeness of any information on this site.</p>
-    </div>
-    <div class="legal-section">
-      <h2>6. Limitation of Liability</h2>
-      <p>FATHER&SUN HOME SOLUTIONS LLC shall not be liable for any indirect, incidental, or consequential damages arising from your use of this website or reliance on information provided herein.</p>
-    </div>
-    <div class="legal-section">
-      <h2>7. Changes to Terms</h2>
-      <p>We reserve the right to update these Terms of Service at any time. Continued use of the website following any changes constitutes acceptance of the updated terms.</p>
-    </div>
-    <div class="legal-section">
-      <h2>8. Governing Law</h2>
-      <p>These Terms of Service are governed by the laws of the State of Florida, United States, without regard to conflict of law principles.</p>
-    </div>
-    <div class="legal-section">
-      <h2>9. Contact</h2>
-      <p>FATHER&SUN HOME SOLUTIONS LLC<br>
-      7680 University Blvd STE 380, Orlando, FL 32819<br>
-      Email: rodrigosavio.guima@gmail.com<br>
-      Phone: +1 (689) 286-8616</p>
+    <button class="btn-submit" onclick="submitForm()">Request Free Consultation</button>
+    <div class="success-overlay" id="success-msg">
+      <div class="success-icon">&#10003;</div>
+      <h2>Thank You!</h2>
+      <p>Your consultation request has been submitted. Our team will reach out to you shortly.</p>
     </div>
   </div>
 </div>
@@ -524,8 +306,8 @@
     FATHER&SUN HOME SOLUTIONS LLC &nbsp;&middot;&nbsp; 7680 University Blvd STE 380, Orlando, FL 32819<br>
     rodrigosavio.guima@gmail.com &nbsp;&middot;&nbsp; +1 (689) 286-8616<br><br>
     &copy; 2026 FATHER&SUN HOME SOLUTIONS LLC. All rights reserved.<br>
-    <a href="#" onclick="showPage('privacy')">Privacy Policy</a> &nbsp;&middot;&nbsp;
-    <a href="#" onclick="showPage('terms')">Terms of Service</a>
+    <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp;
+    <a href="terms.html">Terms of Service</a>
   </p>
 </footer>
 <script>
@@ -544,7 +326,6 @@
       alert('Please agree to the SMS consent to continue.');
       return;
     }
-    // Hide form fields, show success
     var children = card.children;
     for (var i = 0; i < children.length; i++) {
       if (children[i].id !== 'success-msg') {
@@ -552,12 +333,6 @@
       }
     }
     document.getElementById('success-msg').classList.add('show');
-  }
-  function showPage(name) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('page-' + name).classList.add('active');
-    window.scrollTo(0, 0);
-    return false;
   }
 </script>
 </body>
