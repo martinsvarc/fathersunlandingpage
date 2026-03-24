@@ -274,6 +274,39 @@
     text-decoration: none;
   }
   footer a:hover { color: var(--accent); }
+  /* SUCCESS MESSAGE */
+  .success-overlay {
+    display: none;
+    text-align: center;
+    padding: 48px 24px;
+  }
+  .success-overlay.show { display: block; }
+  .success-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 32px;
+    color: #0b0b0b;
+  }
+  .success-overlay h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .success-overlay p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 360px;
+    margin: 0 auto;
+  }
   @media (max-width: 480px) {
     .form-row { grid-template-columns: 1fr; }
     .form-card { padding: 24px; }
@@ -359,7 +392,12 @@
           Your information will not be sold or shared with third parties for marketing purposes. SMS consent is not a condition of purchase.
         </div>
       </div>
-      <button class="btn-submit">Request Free Consultation</button>
+      <button class="btn-submit" onclick="submitForm()">Request Free Consultation</button>
+      <div class="success-overlay" id="success-msg">
+        <div class="success-icon">&#10003;</div>
+        <h2>Thank You!</h2>
+        <p>Your consultation request has been submitted. Our team will reach out to you shortly.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -491,6 +529,30 @@
   </p>
 </footer>
 <script>
+  function submitForm() {
+    var card = document.querySelector('.form-card');
+    var inputs = card.querySelectorAll('input:not([type="checkbox"]), select');
+    var filled = true;
+    inputs.forEach(function(el) {
+      if (!el.value) filled = false;
+    });
+    if (!filled) {
+      alert('Please fill in all fields.');
+      return;
+    }
+    if (!document.getElementById('sms-consent').checked) {
+      alert('Please agree to the SMS consent to continue.');
+      return;
+    }
+    // Hide form fields, show success
+    var children = card.children;
+    for (var i = 0; i < children.length; i++) {
+      if (children[i].id !== 'success-msg') {
+        children[i].style.display = 'none';
+      }
+    }
+    document.getElementById('success-msg').classList.add('show');
+  }
   function showPage(name) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-' + name).classList.add('active');
